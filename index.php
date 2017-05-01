@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The main template file.
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -9,16 +9,17 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Kshioshita
+ * @package kshioshita
  */
 
 get_header(); ?>
+
+<?php if ( have_posts() ) : ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
@@ -40,13 +41,20 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_pagination( array(
+				'prev_text' => kshioshita_get_svg( array( 'icon' => 'arrow-left', 'fallback' => true ) ) . __( ' Newer', 'kshioshita' ),
+				'next_text' => __( 'Older ', 'kshioshita' ) . kshioshita_get_svg( array( 'icon' => 'arrow-right', 'fallback' => true ) ),
+				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'kshioshita' ) . '</span>',
+			));
 
-		else :
+			// the_posts_pagination( array(
+			// 	'prev_text' => kshioshita_get_svg( array( 'icon' => 'icon-arrow-left2' ) ) . __( ' Newer', 'kshioshita' ),
+			// 	'next_text' => __( 'Older ', 'kshioshita' ) . kshioshita_get_svg( array( 'icon' => 'icon-arrow-right2' ) ),
+			// 	'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'kshioshita' ) . '</span>',
+			// ));
 
-			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
@@ -54,3 +62,11 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
+
+
+else :
+
+	get_template_part( 'template-parts/content', 'none' );
+	return;
+
+endif;
