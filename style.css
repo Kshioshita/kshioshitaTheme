@@ -838,26 +838,36 @@ body {
   margin-right: 1em; }
   .custom-logo-link img {
     display: block;
-    height: 65px;
-    width: auto; }
+    height: 100px;
+    width: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-bottom: auto;
+    margin-top: 2em;
+    top: 0;
+    z-index: 1; }
 
 .site-branding__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 65px; }
+  height: 65px;
+  text-align: center;
+  margin: 0 auto; }
 
 .site-title {
   margin: 0;
   padding: 0;
   font-size: 3em;
   font-weight: 400;
-  line-height: 1em; }
+  line-height: 1em;
+  z-index: 3; }
   .site-title a {
     color: black;
     text-decoration: none; }
-    .site-title a:hover, .site-title a:focus {
-      text-decoration: underline; }
 
 .site-description {
   margin: 0;
@@ -912,7 +922,7 @@ Header Menu
   .main-navigation a {
     display: inline-block;
     width: 100%;
-    padding: .5em 1em .5em 0;
+    padding: .5em 1em .5em .5em;
     text-decoration: none;
     color: #fff; }
   .main-navigation a:hover,
@@ -936,15 +946,17 @@ button.dropdown-toggle {
 
 .menu-toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 110px;
+  left: 0;
   display: block;
-  margin: 1.2em 1.2em 0 0;
   padding: .6em .8em;
   font-size: 80%;
   text-transform: uppercase;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 300;
+  width: 100%;
+  margin-top: 1.2em; }
 
 /* Toggle small menu and children on */
 .toggled-on ul,
