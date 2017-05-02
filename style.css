@@ -333,7 +333,7 @@ blockquote, q {
   quotes: "" ""; }
 
 hr {
-  background-color: #fff;
+  background-color: #000;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -484,7 +484,7 @@ a {
   a:visited {
     color: #000; }
   a:hover, a:focus, a:active {
-    color: #b51c35; }
+    color: #69768c; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -495,7 +495,7 @@ a {
 .entry-summary a,
 .comment-content a {
   text-decoration: none;
-  border-bottom: 3px solid #b51c35; }
+  border-bottom: 3px solid #69768c; }
   .page-content a:focus, .page-content a:hover,
   .entry-content a:focus,
   .entry-content a:hover,
@@ -503,7 +503,7 @@ a {
   .entry-summary a:hover,
   .comment-content a:focus,
   .comment-content a:hover {
-    color: #b51c35; }
+    color: #69768c; }
 
 /*--------------------------------------------------------------
 ## Content Navigation
@@ -534,8 +534,8 @@ a {
     .paging-navigation a:hover,
     .paging-navigation a:focus {
       color: white;
-      border-color: #b51c35;
-      background: #b51c35; }
+      border-color: #69768c;
+      background: #69768c; }
 
 .nav-links {
   margin: 0 auto;
@@ -577,7 +577,7 @@ a {
 .post-navigation .post-title {
   font-size: 1.2em;
   font-weight: 700;
-  border-bottom: 3px solid #b51c35; }
+  border-bottom: 3px solid #69768c; }
 .post-navigation a:hover .post-title,
 .post-navigation a:focus .post-title {
   border-bottom-color: white; }
@@ -596,10 +596,10 @@ a {
     text-decoration: none; }
     .pagination a:focus, .pagination a:hover {
       color: white;
-      background: #b51c35; }
+      background: #69768c; }
   .pagination .current {
     font-weight: 600;
-    color: #b51c35; }
+    color: #69768c; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -706,9 +706,6 @@ a {
     .page .hentry .entry-header {
       width: 100%;
       flex: 1 0 100%; }
-    .single.has-sidebar .hentry .post-content,
-    .page .hentry .post-content {
-      width: 60%; }
     .single.has-sidebar .hentry .widget-area,
     .page .hentry .widget-area {
       width: 30%; }
@@ -765,7 +762,7 @@ body {
   padding: 1em 2em;
   font-family: "Quicksand", sans-serif;
   color: white;
-  background: #b51c35; }
+  background: #69768c; }
 .search input[type="search"],
 .error-404 input[type="search"] {
   padding: .5em; }
@@ -810,7 +807,7 @@ body {
     background: #d9d9d9; }
     .continue-reading a:focus, .continue-reading a:hover {
       color: white;
-      background: #b51c35; }
+      background: #69768c; }
 
 /*--------------------------------------------------------------
 ## Header
@@ -1012,9 +1009,9 @@ button.dropdown-toggle {
   .cat-links a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #b51c35; }
+    color: #69768c; }
     .cat-links a:focus, .cat-links a:hover {
-      background-color: #b51c35;
+      background-color: #69768c;
       color: white; }
 
 .entry-title {
@@ -1027,7 +1024,7 @@ button.dropdown-toggle {
     text-decoration: none;
     color: black; }
     .entry-title a:focus, .entry-title a:hover {
-      border-bottom: 5px solid #b51c35; }
+      border-bottom: 5px solid #69768c; }
 
 .entry-meta,
 .entry-footer {
@@ -1041,7 +1038,7 @@ button.dropdown-toggle {
     .entry-footer a:focus,
     .entry-footer a:hover {
       color: black;
-      border-bottom: 3px solid #b51c35; }
+      border-bottom: 3px solid #69768c; }
 
 .byline:before {
   content: "|";
@@ -1233,8 +1230,8 @@ button.dropdown-toggle {
     border: 1px solid #c3c3c3; }
     .reply a:hover, .reply a:focus {
       color: #fff;
-      background: #b51c35;
-      border-color: #b51c35; }
+      background: #69768c;
+      border-color: #69768c; }
 
 .comment-content ol {
   list-style-type: decimal; }
@@ -1243,7 +1240,7 @@ button.dropdown-toggle {
 
 .bypostauthor .avatar {
   box-sizing: content-box;
-  border: 5px solid #b51c35;
+  border: 5px solid #69768c;
   margin-top: -5px;
   margin-left: -5px; }
 
@@ -1270,8 +1267,8 @@ button.dropdown-toggle {
     border: 1px solid #c3c3c3; }
     .comment-form .form-submit input:hover, .comment-form .form-submit input:focus {
       color: #fff;
-      background: #b51c35;
-      border-color: #b51c35; }
+      background: #69768c;
+      border-color: #69768c; }
   .comment-form label {
     width: 33%;
     display: block;
@@ -1287,7 +1284,7 @@ button.dropdown-toggle {
   position: relative;
   padding: 1em;
   font-family: "Quicksand", sans-serif;
-  color: #fff;
+  color: #000;
   background-color: #eee;
   text-align: center; }
   @media screen and (min-width: 600px) {
@@ -1343,7 +1340,7 @@ button.dropdown-toggle {
     font-weight: 600;
     text-decoration: none; }
     .widget a:hover, .widget a:focus {
-      border-bottom: 3px solid #b51c35; }
+      border-bottom: 3px solid #69768c; }
   .widget select {
     width: 100%;
     height: 2.5em;
@@ -1537,18 +1534,23 @@ object {
 --------------------------------------------------------------*/
 .wp-caption {
   margin-bottom: 2em;
-  max-width: 100%;
+  max-width: 30%;
+  display: inline-block;
+  box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
   font-size: 90%;
   color: #666666;
   text-align: center; }
+  @media screen and (max-width: 600px) {
+    .wp-caption {
+      max-width: 100%; } }
   .wp-caption a {
     color: inherit; }
   .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
+    width: 100%;
+    display: inline; }
   .wp-caption .wp-caption-text {
+    display: none;
     margin: .5em 0 1.5em 1em; }
     @media screen and (min-width: 600px) {
       .wp-caption .wp-caption-text {
@@ -1556,6 +1558,15 @@ object {
     @media screen and (min-width: 1100px) {
       .wp-caption .wp-caption-text {
         margin-left: 0; } }
+
+.entry-content {
+  text-align: center; }
+
+.entry-header {
+  text-align: center; }
+
+.entry-title {
+  font-weight: 400; }
 
 /*--------------------------------------------------------------
 ## Galleries
@@ -1578,7 +1589,7 @@ object {
       border-bottom: none;
       box-shadow: none; }
       .gallery-item a:hover img, .gallery-item a:focus img {
-        border-color: #b51c35; }
+        border-color: #69768c; }
     .gallery-item a img {
       padding: .5em;
       margin: 0 auto;
